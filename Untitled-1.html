@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Leaflet css file-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css"
+     integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+     crossorigin=""/>
+     <!--Leaflet javascript file-->
+     <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
+     integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s="
+     crossorigin=""></script> 
+    <title>Nakuru</title>
+
+    <style>
+        html, body{
+            height:100%;
+            padding:0;
+            margin:0;
+        }
+        #map{
+            padding:0px;
+            margin:15px;
+            height:85%;
+        }
+    </style>
+</head>
+<body>
+  
+    <h1 class = "title-row"><u>WEB MAP</u></h1>
+    <h2 style = "text-align: center;">BASEMAP</h2>
+    
+    <div id="map", style="height: 500px"></div>
+
+    <style>
+        .title-row:hover{
+            color: blue;
+        }
+        .title-row{
+            color:red;
+            text-align: center;
+        }
+    </style>
+<script>
+    var map = L.map('map').setView([-0.303099, 36.080025], 13);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '@ OpenStreetMap'
+}).addTo(map);
+
+var marker = L.marker([-0.303099, 36.080025]).addTo(map);
+marker.bindPopup("<b>CHENGETICH</b><br>KIMWAS FOOD PLACE.").openPopup();
+
+function onMapClick(e) {
+    alert("You clicked the map at " + e.latlng);
+}
+
+map.on('click', onMapClick);
+</script>
+<a href>"http://127.0.0.1:5500/Web1.html"</a href>
+</body>
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Author</h4>
+                <ul>
+                    <li><a href="#">CAREN CHENGETICH</a></li>
+                    <li><a href="#">ENC222-0142/2019</a></li>
+                </ul>
+               </div> 
+           
+   <div class="footer-col">
+    <h4>Contributor</h4>
+    <ul>
+        <li><a href="#">CAREN CHENGETICH</a></li>
+        <li><a href="#">Leaflet Tutorial</a></li>
+    </ul>
+   </div> 
+   <div class="footer-col">
+    <h4>Marginal Information</h4>
+    <ul>
+        <li><a href="#">OPENSTREETMAP</a></li>
+        
+    </ul>
+   </div> 
+   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,600&display=swap');
+    body{
+        line-height: 1.5;
+        font-family: 'Poppins', sans-serif;
+    }
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+    .row{
+        display flex;
+        flex-wrap: wrap;
+    }
+    ul{
+        list-style: none;
+    }
+    .footer{
+        background-color:chartreuse;
+        padding: 70px 0;
+    }
+    .footer-col{
+        width: 25%;
+        padding: 0 15px;
+    }
+    .footer-col h4{
+        font-size: 25px;
+        color: #ffffff;
+        text-transform: capitalize;
+        margin-bottom: 35px;
+        font-weight: 500;
+        position: relative;
+    }
+    .footer-col h4::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 10px;
+        background-color: #e91ee63;
+        height: 2px;
+        box-sizing:border-box;
+        width:50px;
+    }
+    .footer-col ul li a{
+        font-size: 16px;
+        text-transform: capitalize;
+        color:blue;
+        text-decoration: none;
+        font-weight: 300;
+        color:blue;
+        transition: all o.3s ease;
+    }
+    
+    
+   
+   </style>
+
+</footer>
+</html>
