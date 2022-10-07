@@ -29,17 +29,17 @@
 </head>
 <body>
   
-    <h1 class = "title-row"><u>WEB MAP</u></h1>
-    <h2 style = "text-align: center;">BASEMAP</h2>
+    <h1 class = "title-row"><u>MAP VIEW</u></h1>
+ 
     
     <div id="map", style="height: 500px"></div>
 
     <style>
         .title-row:hover{
-            color: blue;
+            color:green;
         }
         .title-row{
-            color:red;
+            color: #545454;;
             text-align: center;
         }
     </style>
@@ -50,8 +50,8 @@
     attribution: '@ OpenStreetMap'
 }).addTo(map);
 
-var marker = L.marker([-0.303099, 36.080025]).addTo(map);
-marker.bindPopup("<b>CHENGETICH</b><br>KIMWAS FOOD PLACE.").openPopup();
+var marker = L.marker([-1.303029, 36.780025]).addTo(map);
+marker.bindPopup("<b>CUISINE</b>").openPopup();
 
 function onMapClick(e) {
     alert("You clicked the map at " + e.latlng);
@@ -59,7 +59,7 @@ function onMapClick(e) {
 
 map.on('click', onMapClick);
 </script>
-<a href>"http://127.0.0.1:5500/Web1.html"</a href>
+
 </body>
 <footer class="footer">
     <div class="container">
@@ -67,31 +67,14 @@ map.on('click', onMapClick);
             <div class="footer-col">
                 <h4>Author</h4>
                 <ul>
-                    <li><a href="#">CAREN CHENGETICH</a></li>
-                    <li><a href="#">ENC222-0142/2019</a></li>
+                    <li><a href="#">Newton Chege| ENC222-0111/2018</a></li>
                 </ul>
                </div> 
            
-   <div class="footer-col">
-    <h4>Contributor</h4>
-    <ul>
-        <li><a href="#">CAREN CHENGETICH</a></li>
-        <li><a href="#">Leaflet Tutorial</a></li>
-    </ul>
-   </div> 
-   <div class="footer-col">
-    <h4>Marginal Information</h4>
-    <ul>
-        <li><a href="#">OPENSTREETMAP</a></li>
-        
-    </ul>
-   </div> 
+   
+   
    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,600&display=swap');
-    body{
-        line-height: 1.5;
-        font-family: 'Poppins', sans-serif;
-    }
+    
     *{
         margin:0;
         padding:0;
@@ -105,7 +88,7 @@ map.on('click', onMapClick);
         list-style: none;
     }
     .footer{
-        background-color:chartreuse;
+        background-color:black;
         padding: 70px 0;
     }
     .footer-col{
@@ -133,10 +116,10 @@ map.on('click', onMapClick);
     .footer-col ul li a{
         font-size: 16px;
         text-transform: capitalize;
-        color:blue;
+        color:blanchedalmond;
         text-decoration: none;
         font-weight: 300;
-        color:blue;
+        color:wheat;
         transition: all o.3s ease;
     }
     
